@@ -31,7 +31,7 @@ function Register(props) {
   
   onSubmit:async(value)=>{
     console.log(value)
-  await axios.post("http://localhost:8000/api/auth/register",value)
+  await axios.post("https://nodechat-5maz.onrender.com/api/auth/register",value)
   
   .then(res=>{
     toast.success("sucessfully registered!",{

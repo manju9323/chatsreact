@@ -9,7 +9,7 @@ function Chatonline({onlineusers,currentId,setcurrentChat }) {
 
   useEffect(()=>{
    const getfriends=async()=>{
-    const res =await axios.get(`http://localhost:8000/api/user/friends/${currentId}`)
+    const res =await axios.get(`https://nodechat-5maz.onrender.com/api/user/friends/${currentId}`)
     setFriends(res.data);
    };
    getfriends()
@@ -22,7 +22,7 @@ function Chatonline({onlineusers,currentId,setcurrentChat }) {
 
   const handleclick=async(user)=>{
     try{
- const res=await axios.get(`http://localhost:8000/api/conversation/get/two/${currentId}/${user._id}`)
+ const res=await axios.get(`https://nodechat-5maz.onrender.com/api/conversation/get/two/${currentId}/${user._id}`)
  setcurrentChat(res.data)
     }
     catch(err){

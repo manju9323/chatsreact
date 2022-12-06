@@ -13,14 +13,14 @@ function Post({post,refr}) {
   const {currentUser}=useSelector(state=>state.user)
   useEffect(()=>{
   const getuser=async()=>{
-    const res=await axios(`http://localhost:8000/api/user/get?userId=${post.userId}`);
+    const res=await axios(`https://nodechat-5maz.onrender.com/api/user/get?userId=${post.userId}`);
      setUser(res.data)
   }
    getuser()
   },[post._id])
 
   const dell=async()=>{
-     await axios.delete(`http://localhost:8000/api/post/delete/${post._id}`,{headers:{'mmm':`${JSON.parse(localStorage.getItem("mmm"))}`}})
+     await axios.delete(`https://nodechat-5maz.onrender.com/api/post/delete/${post._id}`,{headers:{'mmm':`${JSON.parse(localStorage.getItem("mmm"))}`}})
       .then( res=>{
     toast.success(res.data)
     refr()
@@ -31,9 +31,9 @@ function Post({post,refr}) {
 
   const foll=async()=>{
     //console.log(post._id,post.userId) await axios(`http://localhost:8000/api/user/get?userId=${post.userId}`);
-    await axios.post("http://localhost:8000/api/conversation/get/two",{firstuserId:currentUser._id,seconduserId:post.userId})
+    await axios.post("https://nodechat-5maz.onrender.com/api/conversation/get/two",{firstuserId:currentUser._id,seconduserId:post.userId})
     .then(
-      await axios(`http://localhost:8000/api/user/get?userId=${post.userId}`)
+      await axios(`https://nodechat-5maz.onrender.com/api/user/get?userId=${post.userId}`)
       .then( res=>{
     toast.success(res.data)
    

@@ -20,9 +20,10 @@ function Messanger() {
  const socket =useRef();
 const {currentUser}=useSelector(state=>state.user)
 const scrollRef = useRef();
-
+//https://socketchat-o0d9.onrender.com
 useEffect(()=>{
- socket.current= io("ws://localhost:8900");
+ //socket.current= io("ws://localhost:8900");
+ socket.current= io("https://socketchat-o0d9.onrender.com");
  socket.current.on("getmessage",data=>{
     setarrivalMessage({
       sender:data.senderId,
@@ -48,7 +49,7 @@ useEffect(()=>{
  useEffect(()=>{
   const getConversation=async()=>{
     try{
-      const res= await axios.get(`http://localhost:8000/api/conversation/get/${currentUser._id}`)
+      const res= await axios.get(`https://nodechat-5maz.onrender.com/api/conversation/get/${currentUser._id}`)
       console.log(res.data)
       setConversation(res.data)
     }
@@ -61,7 +62,7 @@ useEffect(()=>{
  useEffect(()=>{
     const getMessage=async()=>{
       try{
-        const res =await axios.get(`http://localhost:8000/api/message/get/${currentChat?._id}`)
+        const res =await axios.get(`https://nodechat-5maz.onrender.com/api/message/get/${currentChat?._id}`)
         setMessage(res.data);
         console.log(res.data)
       }   
@@ -88,7 +89,7 @@ useEffect(()=>{
  })
 
 try{
- const res=await axios.post("http://localhost:8000/api/message/add",message);
+ const res=await axios.post("https://nodechat-5maz.onrender.com/api/message/add",message);
  setMessage([...messages,res.data])
  setNewMessage("")
 }

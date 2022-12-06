@@ -11,7 +11,7 @@ function Conversation({conversation,currentUser}) {
     const friendId=conversation.members.find(m=> m !== currentUser._id)
     const getuser = async ()=>{
       try{
-        const res=await axios(`http://localhost:8000/api/user/get?userId=${friendId}`);
+        const res=await axios(`https://nodechat-5maz.onrender.com/api/user/get?userId=${friendId}`);
        setUser(res.data)
       }
       catch(err){

@@ -19,7 +19,7 @@ function Home() {
   const post=async()=>{
     if(imgUrl && subject)
     {
-    await axios.post("http://localhost:8000/api/post/post",{imgUrl,subject},
+    await axios.post("https://nodechat-5maz.onrender.com/api/post/post",{imgUrl,subject},
     {headers:{'mmm':`${JSON.parse(localStorage.getItem("mmm"))}`}}
     )
     .then( res=>{
@@ -37,7 +37,7 @@ function Home() {
   }
 
   const postget=async()=>{
-    const res=await axios.get("http://localhost:8000/api/post/get")
+    const res=await axios.get("https://nodechat-5maz.onrender.com/api/post/get")
     setPost(res.data)
  }
   useEffect(()=>{

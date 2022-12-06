@@ -32,7 +32,7 @@ function Login(props) {
   
   onSubmit:async(values)=>{
 
-    await axios.post("http://localhost:8000/api/auth/login",values)
+    await axios.post("https://nodechat-5maz.onrender.com/api/auth/login",values)
     .then( res=>{
       dispatch(loginSucess(res.data.others))
     localStorage.setItem("mmm",JSON.stringify(res.data.token))
