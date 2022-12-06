@@ -1,0 +1,125 @@
+.posthome{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(135, 155, 135);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color:aliceblue;
+  align-items: center;
+}
+.postimg{
+  height:325px;
+  width:220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.homeboxtop::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.homeboxtop::-webkit-scrollbar-track {
+  background: #f2f2f2; 
+}
+ 
+/* Handle */
+.homeboxtop::-webkit-scrollbar-thumb {
+  background: rgb(4, 245, 124); 
+}
+
+/* Handle on hover */
+.homeboxtop::-webkit-scrollbar-thumb:hover {
+  background: rgb(188, 214, 93); 
+}
+
+
+.homeboxtop{
+  height: 100%;
+  width: 250px;
+  overflow-y: scroll;
+  padding-right:10px;
+  position: relative;
+}
+.homeboxbottom{
+  position: absolute;
+  bottom: 0;
+  right:155px;
+  height: 20%;
+}
+
+.compose{
+  color: aliceblue;  border-radius: 50%;
+  background-color: rgb(5, 250, 5);
+  height:40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.button{
+  border:none;
+  background-color: rgb(102, 216, 216);
+  color: aliceblue; 
+   border-radius: 10px;
+ 
+}
+.button:hover{
+  background-color: aqua;
+}
+
+
+.homeboxbottom{
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+}
+.bf{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.butto{
+  padding: 1px;
+display: flex;
+flex-direction: column;
+ background-color: transparent;
+  position: absolute;
+  background-color: aquamarine;
+  padding-top: 2px;
+  border-radius: 10px;  gap:2px;
+
+}
+.postbox{
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: absolute;
+  align-items: center;
+  gap:10px;
+  left:30px;
+  bottom:70px;
+  background-color: rgb(128, 240, 16);
+}
+.imgUrlin{
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  outline-color: blue;
+}
+.subjectin{
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  outline-color: blue;
+}
+.sendicon{
+  cursor: pointer;
+
+}
+
+.option{
+  cursor: pointer;
+}
